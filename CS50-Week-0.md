@@ -27,12 +27,13 @@ Lets consider the number 123:
 ```
    Decimal
 
-    10²      10¹     10⁰  # They could be represented by powers
+    10²      10¹     10⁰  # They could be represented by powers, here the 'base' term makes sense
     100       10       1  # These are the places: hundreds, tens and units respectively
       1        2       3
 100 x 1 + 10 x 2 + 1 x 3  =  123
 
 --------------------------------
+
    Binary
    
 ...  2²   2¹   2⁰  # And so forth...
@@ -40,8 +41,43 @@ Lets consider the number 123:
       1    1    1
       4 +  2 +  1  = 7
 ```
-With this example it is possible to see that it's more easier to count in computer's way using binaries than decimals.
+With this example it is possible to see that it's easier to count in computer's way using binaries than decimals.
 
 ---
 
-A bit alone is not such useful so the most used unit to represent them is the **byte**, that is a combination of eight bits, and it can hold a maximum number of 255.
+A bit alone is not such useful so the most used unit to represent them is the **byte**, that is a combination of eight bits, and it can hold a maximum number of 256 digits (from 0 to 255).
+
+And this _byte_ unit is used to represent everything in computing, for example, the letters that we write everywhere in messages, or that you're seeing now: they're represented by bytes for the computer, using a standard named ASCII (_American Standard Code for Information Interchange_), give it a look
+
+## Bytes in characters
+
+![ASCII Table](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/ASCII-Table-wide.svg/875px-ASCII-Table-wide.svg.png)
+
+In it we can see each (at least most) character of our keyboard represented by bytes.
+
+So, when we're sending a message for somebody in a messaging app, the computer reads this:
+
+```
+72 73 33
+ H  I  !
+```
+
+But as you can assume, it can't represent every letter that we know, as it was designed by americans it doesn't have accents like the Portuguese language has or many different characters that many asian languages have.
+
+So for this they created the [Unicode Standard](https://en.wikipedia.org/wiki/Unicode), that's a universal standard for all characters, even for emojis.
+
+## Bytes in colors
+But as we said, they can represent everything in computing, even colors.
+
+The colors in the digital world can be represented by the RGB color model, that are sums of the primary colors Red, Green and Blue, and when they're summed can turn into a **pixel**.
+
+Each primary color can go from 0 to 255 (the size of a byte), where 0 is the ausence of the color, total black, and 255 is the complete color.
+
+For example, if we wanted a light green color, we could represent it with RGB like this:
+```
+R   G   B
+41  255 198
+```
+
+So a pixel is composed by three bytes, and a bitmap image is composed by an enormous quantity of pixels.
+
